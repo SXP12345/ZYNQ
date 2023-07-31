@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent JTAG-SMT2 210251A08870&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-JTAG-SMT2-210251A08870-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-JTAG-SMT2-210251A08870-13722093-0&quot;}}]}"/>
+	<item key="ov7725_system-bitFile" value="${project_loc:ov7725}/_ide/bitstream/design_1_wrapper.bit"/>
+	<item key="ov7725_system-bmmFile" value=""/>
+	<item key="ov7725_system-target" value="Local"/>
+	<item key="ov7725_system-device" value="Auto Detect"/>
+	<item key="ov7725_system-partial_bit" value="false"/>
+	<item key="ov7725_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="ov7725_system"/>
+</section>

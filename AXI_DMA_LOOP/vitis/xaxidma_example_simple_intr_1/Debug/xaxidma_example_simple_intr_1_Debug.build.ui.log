@@ -1,0 +1,10 @@
+2023-07-26T10:43:57.771046600255-10:43:57 **** Incremental Build of configuration Debug for project xaxidma_example_simple_intr_1 ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-make[1]: Nothing to be done for 'main-build'.
+00255-
+10:43:58 Build Finished (took 359ms)
+

@@ -1,0 +1,176 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xCC36EDDAC5AEAFAC",
+      "design_src": "SBD",
+      "device": "xc7z010clg400-1",
+      "name": "bd_365d",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "scoped": "true",
+      "synth_flow_mode": "None",
+      "tool_version": "2021.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ila_lib": ""
+    },
+    "interface_ports": {
+      "SLOT_0_VID_IO": {
+        "mode": "Monitor",
+        "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+        "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+        "port_maps": {
+          "DATA": {
+            "physical_name": "SLOT_0_VID_IO_data",
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "ACTIVE_VIDEO": {
+            "physical_name": "SLOT_0_VID_IO_active_video",
+            "direction": "I"
+          },
+          "VSYNC": {
+            "physical_name": "SLOT_0_VID_IO_vsync",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_ov7725_data_sample_0_0_vid_io_in_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "SLOT_0_VID_IO_data": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "SLOT_0_VID_IO_active_video": {
+        "direction": "I"
+      },
+      "SLOT_0_VID_IO_vsync": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "ila_lib": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "bd_365d_ila_lib_0",
+        "xci_path": "ip\\ip_0\\bd_365d_ila_lib_0.xci",
+        "inst_hier_path": "ila_lib",
+        "parameters": {
+          "ALL_PROBE_SAME_MU": {
+            "value": "TRUE"
+          },
+          "ALL_PROBE_SAME_MU_CNT": {
+            "value": "1"
+          },
+          "C_ADV_TRIGGER": {
+            "value": "FALSE"
+          },
+          "C_DATA_DEPTH": {
+            "value": "1024"
+          },
+          "C_EN_STRG_QUAL": {
+            "value": "0"
+          },
+          "C_EN_TIME_TAG": {
+            "value": "0"
+          },
+          "C_ILA_CLK_FREQ": {
+            "value": "100000000"
+          },
+          "C_INPUT_PIPE_STAGES": {
+            "value": "0"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "3"
+          },
+          "C_PROBE0_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "24"
+          },
+          "C_PROBE1_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE2_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "1"
+          },
+          "C_TIME_TAG_WIDTH": {
+            "value": "32"
+          },
+          "C_TRIGIN_EN": {
+            "value": "false"
+          },
+          "C_TRIGOUT_EN": {
+            "value": "false"
+          },
+          "C_XLNX_HW_PROBE_INFO": {
+            "value": "DEFAULT"
+          }
+        }
+      }
+    },
+    "nets": {
+      "SLOT_0_VID_IO_active_video_1": {
+        "ports": [
+          "SLOT_0_VID_IO_active_video",
+          "ila_lib/probe1"
+        ]
+      },
+      "SLOT_0_VID_IO_data_1": {
+        "ports": [
+          "SLOT_0_VID_IO_data",
+          "ila_lib/probe0"
+        ]
+      },
+      "SLOT_0_VID_IO_vsync_1": {
+        "ports": [
+          "SLOT_0_VID_IO_vsync",
+          "ila_lib/probe2"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "ila_lib/clk"
+        ]
+      }
+    }
+  }
+}

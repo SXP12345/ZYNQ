@@ -1,0 +1,77 @@
+#include "stdio.h"
+#include "xparameters.h"
+#include "xgpiops.h"
+#include "sleep.h"
+#include "xil_exception.h"
+
+/* GPIO */
+// DEVICE ID
+#define GPIO_DEVICE_ID 		XPAR_XGPIOPS_0_DEVICE_ID
+// GPIO配置
+XGpioPs_Config *ConfigPtr;
+XGpioPs Gpio;
+// GPIO引脚
+#define MIO_PS_KEY1  0
+#define EMIO_PL_KEY1 54
+#define EMIO_PL_KEY2 55
+#define EMIO_PL_LED1 56
+#define EMIO_PL_LED2 57
+#define EMIO_PL_LED3 58
+#define EMIO_PL_LED4 59
+
+/* INT */
+// DEVICE ID
+#define INTC_DEVICE_ID		XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define GPIO_INTERRUPT_ID	XPAR_XGPIOPS_0_INTR
+// INT配置
+XScuGic_Config *IntcConfig; /* Instance of the interrupt controller */
+XScuGic Intc; /* The Instance of the Interrupt Controller Driver */
+
+
+int main()
+{
+	printf("GPIO MIO LED TEST!\n");
+	/* 初始化GPIO的驱动 */
+	ConfigPtr = XGpioPs_LookupConfig(GPIO_DEVICE_ID);
+	XGpioPs_CfgInitialize(&Gpio, ConfigPtr, ConfigPtr->BaseAddr);
+	/* 设置GPIO的方向*/
+	XGpioPs_SetDirectionPin(&Gpio, MIO_PS_KEY1, 0);
+	XGpioPs_SetDirectionPin(&Gpio, EMIO_PL_KEY1, 0);
+	XGpioPs_SetDirectionPin(&Gpio, EMIO_PL_KEY2, 0);
+	XGpioPs_SetDirectionPin(&Gpio, EMIO_PL_LED1, 1);
+	XGpioPs_SetDirectionPin(&Gpio, EMIO_PL_LED2, 1);
+	XGpioPs_SetDirectionPin(&Gpio, EMIO_PL_LED3, 1);
+	XGpioPs_SetDirectionPin(&Gpio, EMIO_PL_LED4, 1);
+	/* 设置输出使能 */
+	XGpioPs_SetOutputEnablePin(&Gpio, EMIO_PL_LED1, 1);
+	XGpioPs_SetOutputEnablePin(&Gpio, EMIO_PL_LED2, 1);
+	XGpioPs_SetOutputEnablePin(&Gpio, EMIO_PL_LED3, 1);
+	XGpioPs_SetOutputEnablePin(&Gpio, EMIO_PL_LED4, 1);
+	/* 写数据到GPIO的输出引脚 */
+	XGpioPs_WritePin(&Gpio, EMIO_PL_LED1, LED1);
+	XGpioPs_WritePin(&Gpio, EMIO_PL_LED2, LED2);
+	XGpioPs_WritePin(&Gpio, EMIO_PL_LED3, LED3);
+	XGpioPs_WritePin(&Gpio, EMIO_PL_LED4, LED4);
+
+
+	/* INT */
+	Xil_ExceptionInit();
+	/* Initialize the interrupt controller driver so that it is ready to use. */
+	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+	XScuGic_CfgInitialize(&Intc, IntcConfig, IntcConfig->CpuBaseAddress);
+	/*
+	 * Connect the interrupt controller interrupt handler to the hardware
+	 * interrupt handling logic in the processor.
+	 */
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler)XScuGic_InterruptHandler, &Intc);
+	/*
+	 * Connect the device driver handler that will be called when an
+	 * interrupt for the device occurs, the handler defined above performs
+	 * the specific interrupt processing for the device.
+	 */
+		Status = XScuGic_Connect(GicInstancePtr, GpioIntrId,
+					(Xil_ExceptionHandler)XGpioPs_IntrHandler,
+					(void *)Gpio);
+	return 0;
+}
+

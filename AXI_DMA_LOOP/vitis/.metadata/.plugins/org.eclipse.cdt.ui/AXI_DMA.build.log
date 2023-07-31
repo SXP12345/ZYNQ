@@ -1,0 +1,37 @@
+10:48:54 **** Build of configuration Debug for project AXI_DMA ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/SUXP/Desktop/AXI_DMA_LOOP/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:98:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+   98 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+      |  ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:230:5: warning: variable 'Value' set but not used [-Wunused-but-set-variable]
+  230 |  u8 Value;
+      |     ^~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/SUXP/Desktop/AXI_DMA_LOOP/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: AXI_DMA.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/SUXP/Desktop/AXI_DMA_LOOP/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "AXI_DMA.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AXI_DMA.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size AXI_DMA.elf  |tee "AXI_DMA.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40036	   3024	  24552	  67612	  1081c	AXI_DMA.elf
+'Finished building: AXI_DMA.elf.size'
+' '
+
+10:48:55 Build Finished (took 859ms)
+

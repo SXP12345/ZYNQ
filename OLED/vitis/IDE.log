@@ -1,0 +1,799 @@
+09:25:55 INFO  : Platform repository initialization has completed.
+09:25:56 INFO  : Registering command handlers for Vitis TCF services
+09:25:56 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\SUXP\Desktop\OLED\vitis\temp_xsdb_launch_script.tcl
+09:26:01 INFO  : XSCT server has started successfully.
+09:26:01 INFO  : plnx-install-location is set to ''
+09:26:01 INFO  : Successfully done setting XSCT server connection channel  
+09:26:01 INFO  : Successfully done setting workspace for the tool. 
+09:26:01 INFO  : Successfully done query RDI_DATADIR 
+09:26:29 INFO  : Result from executing command 'getProjects': design_1_wrapper
+09:26:29 INFO  : Result from executing command 'getPlatforms': 
+09:26:29 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:26:29 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+09:26:36 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+09:27:26 INFO  : Example project xspips_eeprom_polled_example_1 has been created successfully.
+10:52:15 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\SUXP\Desktop\OLED\vitis\temp_xsdb_launch_script.tcl
+10:52:18 INFO  : Platform repository initialization has completed.
+10:52:18 INFO  : Registering command handlers for Vitis TCF services
+10:52:19 INFO  : XSCT server has started successfully.
+10:52:19 INFO  : Successfully done setting XSCT server connection channel  
+10:52:19 INFO  : plnx-install-location is set to ''
+10:52:19 INFO  : Successfully done setting workspace for the tool. 
+10:52:19 INFO  : Successfully done query RDI_DATADIR 
+10:53:01 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+11:00:54 INFO  : Result from executing command 'getProjects': design_1_wrapper
+11:00:54 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+11:00:54 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+11:00:56 INFO  : Updating application flags with new BSP settings...
+11:00:56 INFO  : Successfully updated application flags for project OLED.
+11:00:58 INFO  : The hardware specification used by project 'OLED' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+11:00:58 INFO  : The file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+11:00:58 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\SUXP\Desktop\OLED\vitis\OLED\_ide\bitstream' in project 'OLED'.
+11:00:58 INFO  : The file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED\_ide\psinit\ps7_init.tcl' stored in project is removed.
+11:01:01 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\SUXP\Desktop\OLED\vitis\OLED\_ide\psinit' in project 'OLED'.
+11:01:29 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+11:02:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:02:19 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+11:02:19 INFO  : 'jtag frequency' command is executed.
+11:02:19 INFO  : Context for 'APU' is selected.
+11:02:19 INFO  : System reset is completed.
+11:02:22 INFO  : 'after 3000' command is executed.
+11:02:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+11:02:23 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+11:02:23 INFO  : Context for 'APU' is selected.
+11:02:23 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:02:23 INFO  : 'configparams force-mem-access 1' command is executed.
+11:02:23 INFO  : Context for 'APU' is selected.
+11:02:23 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+11:02:24 INFO  : 'ps7_init' command is executed.
+11:02:24 INFO  : 'ps7_post_config' command is executed.
+11:02:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:02:24 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:02:24 INFO  : 'configparams force-mem-access 0' command is executed.
+11:02:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:02:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:02:24 INFO  : 'con' command is executed.
+11:02:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:02:24 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+11:41:12 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+11:44:15 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+11:44:33 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+11:48:50 INFO  : Disconnected from the channel tcfchan#4.
+11:48:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:48:50 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+11:48:50 INFO  : 'jtag frequency' command is executed.
+11:48:50 INFO  : Context for 'APU' is selected.
+11:48:50 INFO  : System reset is completed.
+11:48:53 INFO  : 'after 3000' command is executed.
+11:48:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+11:48:54 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+11:48:54 INFO  : Context for 'APU' is selected.
+11:48:54 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:48:54 INFO  : 'configparams force-mem-access 1' command is executed.
+11:48:54 INFO  : Context for 'APU' is selected.
+11:48:54 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+11:48:54 INFO  : 'ps7_init' command is executed.
+11:48:54 INFO  : 'ps7_post_config' command is executed.
+11:48:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:48:55 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:48:55 INFO  : 'configparams force-mem-access 0' command is executed.
+11:48:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:48:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:48:55 INFO  : 'con' command is executed.
+11:48:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:48:55 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+11:49:38 INFO  : Disconnected from the channel tcfchan#6.
+11:49:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:49:39 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+11:49:39 INFO  : 'jtag frequency' command is executed.
+11:49:39 INFO  : Context for 'APU' is selected.
+11:49:39 INFO  : System reset is completed.
+11:49:42 INFO  : 'after 3000' command is executed.
+11:49:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+11:49:43 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+11:49:43 INFO  : Context for 'APU' is selected.
+11:49:43 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:49:43 INFO  : 'configparams force-mem-access 1' command is executed.
+11:49:43 INFO  : Context for 'APU' is selected.
+11:49:43 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+11:49:43 INFO  : 'ps7_init' command is executed.
+11:49:43 INFO  : 'ps7_post_config' command is executed.
+11:49:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:49:43 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:49:43 INFO  : 'configparams force-mem-access 0' command is executed.
+11:49:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:49:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:49:44 INFO  : 'con' command is executed.
+11:49:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:49:44 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+11:50:09 INFO  : Disconnected from the channel tcfchan#7.
+11:50:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:50:09 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+11:50:09 INFO  : 'jtag frequency' command is executed.
+11:50:09 INFO  : Context for 'APU' is selected.
+11:50:09 INFO  : System reset is completed.
+11:50:12 INFO  : 'after 3000' command is executed.
+11:50:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+11:50:14 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+11:50:14 INFO  : Context for 'APU' is selected.
+11:50:14 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:50:14 INFO  : 'configparams force-mem-access 1' command is executed.
+11:50:14 INFO  : Context for 'APU' is selected.
+11:50:14 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+11:50:14 INFO  : 'ps7_init' command is executed.
+11:50:14 INFO  : 'ps7_post_config' command is executed.
+11:50:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:50:14 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:50:14 INFO  : 'configparams force-mem-access 0' command is executed.
+11:50:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:50:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:50:14 INFO  : 'con' command is executed.
+11:50:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:50:14 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+11:50:33 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+11:50:47 INFO  : Disconnected from the channel tcfchan#8.
+11:50:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:50:47 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+11:50:47 INFO  : 'jtag frequency' command is executed.
+11:50:47 INFO  : Context for 'APU' is selected.
+11:50:47 INFO  : System reset is completed.
+11:50:50 INFO  : 'after 3000' command is executed.
+11:50:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+11:50:51 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+11:50:51 INFO  : Context for 'APU' is selected.
+11:50:51 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:50:51 INFO  : 'configparams force-mem-access 1' command is executed.
+11:50:51 INFO  : Context for 'APU' is selected.
+11:50:51 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+11:50:52 INFO  : 'ps7_init' command is executed.
+11:50:52 INFO  : 'ps7_post_config' command is executed.
+11:50:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:50:52 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:50:52 INFO  : 'configparams force-mem-access 0' command is executed.
+11:50:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:50:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:50:52 INFO  : 'con' command is executed.
+11:50:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:50:52 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+11:51:24 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+11:51:51 INFO  : Disconnected from the channel tcfchan#10.
+11:51:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:51:52 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+11:51:52 INFO  : 'jtag frequency' command is executed.
+11:51:52 INFO  : Context for 'APU' is selected.
+11:51:52 INFO  : System reset is completed.
+11:51:55 INFO  : 'after 3000' command is executed.
+11:51:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+11:51:56 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+11:51:56 INFO  : Context for 'APU' is selected.
+11:51:56 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:51:56 INFO  : 'configparams force-mem-access 1' command is executed.
+11:51:56 INFO  : Context for 'APU' is selected.
+11:51:56 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+11:51:56 INFO  : 'ps7_init' command is executed.
+11:51:56 INFO  : 'ps7_post_config' command is executed.
+11:51:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:51:57 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:51:57 INFO  : 'configparams force-mem-access 0' command is executed.
+11:51:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:51:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:51:57 INFO  : 'con' command is executed.
+11:51:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:51:57 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+11:52:53 INFO  : Disconnected from the channel tcfchan#12.
+11:52:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:52:55 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+11:52:55 ERROR : port closed
+11:52:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+11:52:55 ERROR : port closed
+11:53:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:53:00 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+11:53:00 INFO  : 'jtag frequency' command is executed.
+11:53:00 INFO  : Context for 'APU' is selected.
+11:53:00 INFO  : System reset is completed.
+11:53:03 INFO  : 'after 3000' command is executed.
+11:53:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+11:53:05 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+11:53:05 INFO  : Context for 'APU' is selected.
+11:53:05 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:53:05 INFO  : 'configparams force-mem-access 1' command is executed.
+11:53:05 INFO  : Context for 'APU' is selected.
+11:53:05 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+11:53:05 INFO  : 'ps7_init' command is executed.
+11:53:05 INFO  : 'ps7_post_config' command is executed.
+11:53:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:53:05 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:53:05 INFO  : 'configparams force-mem-access 0' command is executed.
+11:53:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:53:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:53:05 INFO  : 'con' command is executed.
+11:53:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:53:05 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+11:53:51 INFO  : Disconnected from the channel tcfchan#13.
+11:53:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:53:54 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+11:53:54 INFO  : 'jtag frequency' command is executed.
+11:53:54 INFO  : Context for 'APU' is selected.
+11:53:54 INFO  : System reset is completed.
+11:53:57 INFO  : 'after 3000' command is executed.
+11:53:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+11:53:59 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+11:53:59 INFO  : Context for 'APU' is selected.
+11:53:59 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:53:59 INFO  : 'configparams force-mem-access 1' command is executed.
+11:53:59 INFO  : Context for 'APU' is selected.
+11:53:59 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+11:53:59 INFO  : 'ps7_init' command is executed.
+11:53:59 INFO  : 'ps7_post_config' command is executed.
+11:53:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:53:59 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:53:59 INFO  : 'configparams force-mem-access 0' command is executed.
+11:53:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:53:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:53:59 INFO  : 'con' command is executed.
+11:53:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:53:59 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+11:54:18 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+11:54:32 INFO  : Disconnected from the channel tcfchan#14.
+11:54:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:54:34 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+11:54:34 ERROR : port closed
+11:54:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+11:54:34 ERROR : port closed
+11:54:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:54:41 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+11:54:41 INFO  : 'jtag frequency' command is executed.
+11:54:41 INFO  : Context for 'APU' is selected.
+11:54:41 INFO  : System reset is completed.
+11:54:44 INFO  : 'after 3000' command is executed.
+11:54:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+11:54:45 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+11:54:45 INFO  : Context for 'APU' is selected.
+11:54:45 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:54:45 INFO  : 'configparams force-mem-access 1' command is executed.
+11:54:45 INFO  : Context for 'APU' is selected.
+11:54:45 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+11:54:45 INFO  : 'ps7_init' command is executed.
+11:54:45 INFO  : 'ps7_post_config' command is executed.
+11:54:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:54:46 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:54:46 INFO  : 'configparams force-mem-access 0' command is executed.
+11:54:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:54:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:54:46 INFO  : 'con' command is executed.
+11:54:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:54:46 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+12:00:03 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+12:00:15 INFO  : Disconnected from the channel tcfchan#16.
+12:00:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:00:16 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+12:00:16 INFO  : 'jtag frequency' command is executed.
+12:00:16 INFO  : Context for 'APU' is selected.
+12:00:16 INFO  : System reset is completed.
+12:00:19 INFO  : 'after 3000' command is executed.
+12:00:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+12:00:20 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+12:00:20 INFO  : Context for 'APU' is selected.
+12:00:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+12:00:20 INFO  : 'configparams force-mem-access 1' command is executed.
+12:00:20 INFO  : Context for 'APU' is selected.
+12:00:20 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+12:00:20 INFO  : 'ps7_init' command is executed.
+12:00:20 INFO  : 'ps7_post_config' command is executed.
+12:00:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:00:21 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:00:21 INFO  : 'configparams force-mem-access 0' command is executed.
+12:00:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:00:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:00:21 INFO  : 'con' command is executed.
+12:00:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:00:21 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+12:00:46 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+12:01:01 INFO  : Disconnected from the channel tcfchan#18.
+12:01:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:01:01 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+12:01:01 INFO  : 'jtag frequency' command is executed.
+12:01:01 INFO  : Context for 'APU' is selected.
+12:01:01 INFO  : System reset is completed.
+12:01:04 INFO  : 'after 3000' command is executed.
+12:01:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+12:01:05 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+12:01:06 INFO  : Context for 'APU' is selected.
+12:01:06 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+12:01:06 INFO  : 'configparams force-mem-access 1' command is executed.
+12:01:06 INFO  : Context for 'APU' is selected.
+12:01:06 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+12:01:06 INFO  : 'ps7_init' command is executed.
+12:01:06 INFO  : 'ps7_post_config' command is executed.
+12:01:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:01:06 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:01:06 INFO  : 'configparams force-mem-access 0' command is executed.
+12:01:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:01:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:01:06 INFO  : 'con' command is executed.
+12:01:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:01:06 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+12:22:13 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+12:22:29 INFO  : Disconnected from the channel tcfchan#20.
+12:22:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:22:29 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+12:22:29 INFO  : 'jtag frequency' command is executed.
+12:22:29 INFO  : Context for 'APU' is selected.
+12:22:29 INFO  : System reset is completed.
+12:22:32 INFO  : 'after 3000' command is executed.
+12:22:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+12:22:33 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+12:22:33 INFO  : Context for 'APU' is selected.
+12:22:33 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+12:22:33 INFO  : 'configparams force-mem-access 1' command is executed.
+12:22:33 INFO  : Context for 'APU' is selected.
+12:22:33 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+12:22:34 INFO  : 'ps7_init' command is executed.
+12:22:34 INFO  : 'ps7_post_config' command is executed.
+12:22:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:22:34 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:22:34 INFO  : 'configparams force-mem-access 0' command is executed.
+12:22:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:22:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:22:34 INFO  : 'con' command is executed.
+12:22:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:22:34 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+12:22:51 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+12:23:03 INFO  : Disconnected from the channel tcfchan#22.
+12:23:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:23:03 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+12:23:03 INFO  : 'jtag frequency' command is executed.
+12:23:03 INFO  : Context for 'APU' is selected.
+12:23:03 INFO  : System reset is completed.
+12:23:06 INFO  : 'after 3000' command is executed.
+12:23:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+12:23:07 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+12:23:07 INFO  : Context for 'APU' is selected.
+12:23:07 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+12:23:07 INFO  : 'configparams force-mem-access 1' command is executed.
+12:23:07 INFO  : Context for 'APU' is selected.
+12:23:07 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+12:23:08 INFO  : 'ps7_init' command is executed.
+12:23:08 INFO  : 'ps7_post_config' command is executed.
+12:23:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:23:08 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:23:08 INFO  : 'configparams force-mem-access 0' command is executed.
+12:23:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:23:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:23:08 INFO  : 'con' command is executed.
+12:23:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:23:08 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+12:23:21 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+12:23:36 INFO  : Disconnected from the channel tcfchan#24.
+12:23:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:23:36 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+12:23:36 INFO  : 'jtag frequency' command is executed.
+12:23:36 INFO  : Context for 'APU' is selected.
+12:23:36 INFO  : System reset is completed.
+12:23:39 INFO  : 'after 3000' command is executed.
+12:23:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+12:23:40 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+12:23:40 INFO  : Context for 'APU' is selected.
+12:23:40 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+12:23:40 INFO  : 'configparams force-mem-access 1' command is executed.
+12:23:40 INFO  : Context for 'APU' is selected.
+12:23:40 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+12:23:41 INFO  : 'ps7_init' command is executed.
+12:23:41 INFO  : 'ps7_post_config' command is executed.
+12:23:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:23:41 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:23:41 INFO  : 'configparams force-mem-access 0' command is executed.
+12:23:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:23:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:23:41 INFO  : 'con' command is executed.
+12:23:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:23:41 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+12:55:27 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+12:55:52 INFO  : Disconnected from the channel tcfchan#26.
+12:55:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:55:52 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+12:55:52 INFO  : 'jtag frequency' command is executed.
+12:55:52 INFO  : Context for 'APU' is selected.
+12:55:52 INFO  : System reset is completed.
+12:55:55 INFO  : 'after 3000' command is executed.
+12:55:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+12:55:57 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+12:55:57 INFO  : Context for 'APU' is selected.
+12:55:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+12:55:57 INFO  : 'configparams force-mem-access 1' command is executed.
+12:55:57 INFO  : Context for 'APU' is selected.
+12:55:57 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+12:55:57 INFO  : 'ps7_init' command is executed.
+12:55:57 INFO  : 'ps7_post_config' command is executed.
+12:55:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:57 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:55:57 INFO  : 'configparams force-mem-access 0' command is executed.
+12:55:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:55:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:57 INFO  : 'con' command is executed.
+12:55:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:55:57 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+12:56:59 INFO  : Checking for BSP changes to sync application flags for project 'OLED'...
+12:57:10 INFO  : Disconnected from the channel tcfchan#28.
+12:57:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:57:11 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+12:57:11 INFO  : 'jtag frequency' command is executed.
+12:57:11 INFO  : Context for 'APU' is selected.
+12:57:11 INFO  : System reset is completed.
+12:57:14 INFO  : 'after 3000' command is executed.
+12:57:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+12:57:15 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit"
+12:57:15 INFO  : Context for 'APU' is selected.
+12:57:15 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+12:57:15 INFO  : 'configparams force-mem-access 1' command is executed.
+12:57:15 INFO  : Context for 'APU' is selected.
+12:57:15 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl' is done.
+12:57:15 INFO  : 'ps7_init' command is executed.
+12:57:15 INFO  : 'ps7_post_config' command is executed.
+12:57:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:57:15 INFO  : The application 'C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:57:15 INFO  : 'configparams force-mem-access 0' command is executed.
+12:57:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/OLED/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/OLED/vitis/OLED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/OLED/vitis/OLED/Debug/OLED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:57:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:57:16 INFO  : 'con' command is executed.
+12:57:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:57:16 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\OLED\vitis\OLED_system\_ide\scripts\systemdebugger_oled_system_standalone.tcl'
+13:32:44 INFO  : Disconnected from the channel tcfchan#30.

@@ -1,0 +1,1 @@
+vopt +acc=npr -l elaborate.log -L xil_defaultlib -L xpm -L v_vid_in_axi4s_v4_0_9 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.v_vid_in_axi4s_0 xil_defaultlib.glbl -o v_vid_in_axi4s_0_opt

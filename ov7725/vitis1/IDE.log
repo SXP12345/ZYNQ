@@ -1,0 +1,156 @@
+20:14:10 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\SUXP\Desktop\ov7725\vitis1\temp_xsdb_launch_script.tcl
+20:14:10 INFO  : Platform repository initialization has completed.
+20:14:10 INFO  : Registering command handlers for Vitis TCF services
+20:14:12 INFO  : XSCT server has started successfully.
+20:14:12 INFO  : Successfully done setting XSCT server connection channel  
+20:14:12 INFO  : plnx-install-location is set to ''
+20:14:12 INFO  : Successfully done query RDI_DATADIR 
+20:14:12 INFO  : Successfully done setting workspace for the tool. 
+20:15:17 INFO  : Result from executing command 'getProjects': design_1_wrapper
+20:15:17 INFO  : Result from executing command 'getPlatforms': 
+20:15:17 WARN  : An unexpected exception occurred in the module 'platform project logging'
+20:15:18 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+20:15:23 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+21:13:44 INFO  : Result from executing command 'getProjects': design_1_wrapper
+21:13:44 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/SUXP/Desktop/ov7725/vitis1/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+21:13:44 INFO  : Checking for BSP changes to sync application flags for project 'ppp'...
+21:14:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:14:07 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+21:14:07 INFO  : 'jtag frequency' command is executed.
+21:14:07 INFO  : Context for 'APU' is selected.
+21:14:07 INFO  : System reset is completed.
+21:14:10 INFO  : 'after 3000' command is executed.
+21:14:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+21:14:11 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/bitstream/design_1_wrapper.bit"
+21:14:11 INFO  : Context for 'APU' is selected.
+21:14:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/ov7725/vitis1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:14:12 INFO  : 'configparams force-mem-access 1' command is executed.
+21:14:12 INFO  : Context for 'APU' is selected.
+21:14:12 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/psinit/ps7_init.tcl' is done.
+21:14:12 INFO  : 'ps7_init' command is executed.
+21:14:12 INFO  : 'ps7_post_config' command is executed.
+21:14:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:14:12 INFO  : The application 'C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/Debug/ppp.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:14:12 INFO  : 'configparams force-mem-access 0' command is executed.
+21:14:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/ov7725/vitis1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/Debug/ppp.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:14:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:14:12 INFO  : 'con' command is executed.
+21:14:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:14:12 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\ov7725\vitis1\ppp_system\_ide\scripts\systemdebugger_ppp_system_standalone.tcl'
+21:27:23 INFO  : Disconnected from the channel tcfchan#3.
+21:28:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:28:01 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+21:28:01 INFO  : 'jtag frequency' command is executed.
+21:28:01 INFO  : Context for 'APU' is selected.
+21:28:01 INFO  : System reset is completed.
+21:28:04 INFO  : 'after 3000' command is executed.
+21:28:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+21:28:06 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/bitstream/design_1_wrapper.bit"
+21:28:06 INFO  : Context for 'APU' is selected.
+21:28:06 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/ov7725/vitis1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:28:06 INFO  : 'configparams force-mem-access 1' command is executed.
+21:28:06 INFO  : Context for 'APU' is selected.
+21:28:06 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/psinit/ps7_init.tcl' is done.
+21:28:06 INFO  : 'ps7_init' command is executed.
+21:28:06 INFO  : 'ps7_post_config' command is executed.
+21:28:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:28:06 INFO  : The application 'C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/Debug/ppp.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:28:06 INFO  : 'configparams force-mem-access 0' command is executed.
+21:28:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/ov7725/vitis1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/Debug/ppp.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:28:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:28:07 INFO  : 'con' command is executed.
+21:28:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:28:07 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\ov7725\vitis1\ppp_system\_ide\scripts\systemdebugger_ppp_system_standalone.tcl'
+21:29:19 INFO  : Checking for BSP changes to sync application flags for project 'ppp'...
+21:30:02 INFO  : Checking for BSP changes to sync application flags for project 'ppp'...
+21:30:16 INFO  : Disconnected from the channel tcfchan#4.
+21:30:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:30:16 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+21:30:16 INFO  : 'jtag frequency' command is executed.
+21:30:16 INFO  : Context for 'APU' is selected.
+21:30:16 INFO  : System reset is completed.
+21:30:19 INFO  : 'after 3000' command is executed.
+21:30:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}' command is executed.
+21:30:21 INFO  : Device configured successfully with "C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/bitstream/design_1_wrapper.bit"
+21:30:21 INFO  : Context for 'APU' is selected.
+21:30:21 INFO  : Hardware design and registers information is loaded from 'C:/Users/SUXP/Desktop/ov7725/vitis1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:30:21 INFO  : 'configparams force-mem-access 1' command is executed.
+21:30:21 INFO  : Context for 'APU' is selected.
+21:30:21 INFO  : Sourcing of 'C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/psinit/ps7_init.tcl' is done.
+21:30:21 INFO  : 'ps7_init' command is executed.
+21:30:21 INFO  : 'ps7_post_config' command is executed.
+21:30:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:30:21 INFO  : The application 'C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/Debug/ppp.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:30:21 INFO  : 'configparams force-mem-access 0' command is executed.
+21:30:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A08870" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A08870-13722093-0"}
+fpga -file C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/SUXP/Desktop/ov7725/vitis1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/Debug/ppp.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:30:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:30:21 INFO  : 'con' command is executed.
+21:30:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:30:21 INFO  : Launch script is exported to file 'C:\Users\SUXP\Desktop\ov7725\vitis1\ppp_system\_ide\scripts\systemdebugger_ppp_system_standalone.tcl'
+21:41:12 INFO  : Disconnected from the channel tcfchan#7.

@@ -1,0 +1,25 @@
+16:53:27 **** Incremental Build of configuration Debug for project LCD ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/lcd.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/SUXP/Desktop/LCD/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/lcd.d" -MT"src/lcd.o" -o "src/lcd.o" "../src/lcd.c"
+'Finished building: ../src/lcd.c'
+' '
+'Building target: LCD.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/SUXP/Desktop/LCD/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "LCD.elf"  ./src/lcd.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: LCD.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size LCD.elf  |tee "LCD.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28902	   1152	  22680	  52734	   cdfe	LCD.elf
+'Finished building: LCD.elf.size'
+' '
+
+16:53:28 Build Finished (took 668ms)
+

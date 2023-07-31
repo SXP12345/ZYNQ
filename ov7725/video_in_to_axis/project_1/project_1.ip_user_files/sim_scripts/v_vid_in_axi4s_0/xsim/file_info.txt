@@ -1,0 +1,2 @@
+v_vid_in_axi4s_0.v,verilog,xil_defaultlib,../../../../project_1.gen/sources_1/ip/v_vid_in_axi4s_0/sim/v_vid_in_axi4s_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,10 @@
+21:30:03 **** Incremental Build of configuration Debug for project ppp_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 61734 C:/Users/SUXP/Desktop/ov7725/vitis1/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/SUXP/Desktop/ov7725/vitis1/ppp_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/SUXP/Desktop/ov7725/vitis1/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/SUXP/Desktop/ov7725/vitis1/ppp_system/Debug/system.bif --bitstream C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/Debug/ppp.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/SUXP/Desktop/ov7725/vitis1/ppp/_ide/bitstream/design_1_wrapper.bit
+Running D:/Xilinx/Vitis/2021.1/bin/bootgen  -image C:/Users/SUXP/Desktop/ov7725/vitis1/ppp_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+21:30:09 Build Finished (took 6s.2ms)
+

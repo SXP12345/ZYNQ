@@ -1,0 +1,220 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x927280E53F714540",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "analog_ov_0": "",
+      "ov7725_data_sample_0": "",
+      "system_ila_3": "",
+      "system_ila_4": "",
+      "ila_0": ""
+    },
+    "ports": {
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "rst_n_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "analog_ov_0": {
+        "vlnv": "xilinx.com:user:analog_ov:1.0",
+        "xci_name": "design_1_analog_ov_0_0",
+        "xci_path": "ip\\design_1_analog_ov_0_0\\design_1_analog_ov_0_0.xci",
+        "inst_hier_path": "analog_ov_0"
+      },
+      "ov7725_data_sample_0": {
+        "vlnv": "xilinx.com:user:ov7725_data_sample:1.0",
+        "xci_name": "design_1_ov7725_data_sample_0_0",
+        "xci_path": "ip\\design_1_ov7725_data_sample_0_0\\design_1_ov7725_data_sample_0_0.xci",
+        "inst_hier_path": "ov7725_data_sample_0"
+      },
+      "system_ila_3": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "design_1_system_ila_3_0",
+        "xci_path": "ip\\design_1_system_ila_3_0\\design_1_system_ila_3_0.xci",
+        "inst_hier_path": "system_ila_3",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "1"
+          },
+          "C_PROBE0_TYPE": {
+            "value": "0"
+          }
+        }
+      },
+      "system_ila_4": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "design_1_system_ila_4_0",
+        "xci_path": "ip\\design_1_system_ila_4_0\\design_1_system_ila_4_0.xci",
+        "inst_hier_path": "system_ila_4",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "INTERFACE"
+          },
+          "C_NUM_MONITOR_SLOTS": {
+            "value": "1"
+          },
+          "C_SLOT_0_INTF_TYPE": {
+            "value": "xilinx.com:interface:vid_io_rtl:1.0"
+          },
+          "C_SLOT_0_TYPE": {
+            "value": "0"
+          }
+        },
+        "interface_ports": {
+          "SLOT_0_VID_IO": {
+            "mode": "Monitor",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_1",
+        "xci_path": "ip\\design_1_ila_0_1\\design_1_ila_0_1.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "4096"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "4"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "8"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "ov7725_data_sample_0_video_out": {
+        "interface_ports": [
+          "ov7725_data_sample_0/video_out",
+          "system_ila_4/SLOT_0_VID_IO"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      }
+    },
+    "nets": {
+      "analog_ov_0_data": {
+        "ports": [
+          "analog_ov_0/data",
+          "ov7725_data_sample_0/ov7725_din",
+          "ila_0/probe3"
+        ]
+      },
+      "analog_ov_0_href": {
+        "ports": [
+          "analog_ov_0/href",
+          "ov7725_data_sample_0/ov7725_href",
+          "ila_0/probe2"
+        ]
+      },
+      "analog_ov_0_pclk": {
+        "ports": [
+          "analog_ov_0/pclk",
+          "ov7725_data_sample_0/ov7725_pclk",
+          "ila_0/probe0"
+        ]
+      },
+      "analog_ov_0_vsync": {
+        "ports": [
+          "analog_ov_0/vsync",
+          "ov7725_data_sample_0/ov7725_vsync",
+          "ila_0/probe1"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "analog_ov_0/clk",
+          "system_ila_3/clk",
+          "system_ila_4/clk",
+          "ila_0/clk"
+        ]
+      },
+      "ov7725_data_sample_0_vid_io_in_clk": {
+        "ports": [
+          "ov7725_data_sample_0/vid_io_in_clk",
+          "system_ila_3/probe0"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n_0",
+          "analog_ov_0/rst_n",
+          "ov7725_data_sample_0/rst_n"
+        ]
+      }
+    }
+  }
+}

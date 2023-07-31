@@ -1,0 +1,27 @@
+#include "stdio.h"
+#include "xparameters.h"
+#include "xgpiops.h"
+
+#define GPIO_DEVICE_ID XPAR_XGPIOPS_0_DEVICE_ID
+
+XGpioPs_Config *ConfigPtr;
+XGpioPs Gpio;
+
+int main()
+{
+	while(1)
+	{
+		printf("GPIO MIO LED TEST!\n");
+		/* 初始化GPIO的驱动 */
+		// This function looks for the device configuration based on the unique device ID.
+		ConfigPtr = XGpioPs_LookupConfig(GPIO_DEVICE_ID);
+		// This function initializes a XGpioPs instance/driver.
+		XGpioPs_CfgInitialize(&Gpio, ConfigPtr, ConfigPtr->BaseAddr);
+		// 设置GPIO的方向设置为输出
+
+		// 设置输出使能
+
+		// 写数据到GPIO的输出引脚
+	}
+	return 0;
+}

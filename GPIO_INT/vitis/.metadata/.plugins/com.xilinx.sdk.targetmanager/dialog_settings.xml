@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="GPIO_EMIO_system-bitFile" value="${project_loc:GPIO_EMIO}/_ide/bitstream/design_1_wrapper.bit"/>
+	<item key="GPIO_EMIO_system-bmmFile" value=""/>
+	<item key="GPIO_EMIO_system-target" value="Local"/>
+	<item key="GPIO_EMIO_system-device" value="Auto Detect"/>
+	<item key="GPIO_EMIO_system-partial_bit" value="false"/>
+	<item key="GPIO_EMIO_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="GPIO_EMIO_system"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent JTAG-SMT2 210251A08870&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-JTAG-SMT2-210251A08870-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-JTAG-SMT2-210251A08870-13722093-0&quot;}}]}"/>
+</section>

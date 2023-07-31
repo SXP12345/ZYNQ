@@ -1,0 +1,37 @@
+timestamp=[2023-06-30 16:09:48], mode=WORKBENCH_START, duration=0:00:11.757, duration_ms=11757, data={}
+timestamp=[2023-06-30 16:09:49], mode=WORKBENCH_UI_INIT, duration=0:00:00.482, duration_ms=482, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2023-06-30 16:09:49], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.098, duration_ms=98, data={}
+timestamp=[2023-06-30 16:10:51], mode=APP_CREATION, duration=0:00:15.016, duration_ms=15016, data={name=GPIO_EMIO, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2023-06-30 16:12:02], mode=PLATFORM_GENERATION, duration=0:00:02.768, duration_ms=2768, data={name=design_1_wrapper}
+timestamp=[2023-06-30 16:12:16], mode=PLATFORM_GENERATION, duration=0:00:09.799, duration_ms=9799, data={name=design_1_wrapper}
+timestamp=[2023-06-30 16:12:24], mode=BUILD, duration=0:00:00.887, duration_ms=887, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:12:32], mode=BUILD, duration=0:00:07.075, duration_ms=7075, data={name=GPIO_EMIO_system, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:44:45], mode=BUILD, duration=0:00:00.454, duration_ms=454, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:45:30], mode=BUILD, duration=0:00:00.423, duration_ms=423, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:46:22], mode=BUILD, duration=0:00:00.673, duration_ms=673, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:46:28], mode=BUILD, duration=0:00:05.859, duration_ms=5859, data={name=GPIO_EMIO_system, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:47:58], mode=BUILD, duration=0:00:00.375, duration_ms=375, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:48:05], mode=BUILD, duration=0:00:05.904, duration_ms=5904, data={name=GPIO_EMIO_system, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:48:35], mode=BUILD, duration=0:00:00.671, duration_ms=671, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:48:41], mode=BUILD, duration=0:00:05.859, duration_ms=5859, data={name=GPIO_EMIO_system, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:50:06], mode=BUILD, duration=0:00:00.629, duration_ms=629, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:50:22], mode=BUILD, duration=0:00:00.703, duration_ms=703, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:50:29], mode=BUILD, duration=0:00:05.875, duration_ms=5875, data={name=GPIO_EMIO_system, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:51:29], mode=BUILD, duration=0:00:00.734, duration_ms=734, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:51:35], mode=BUILD, duration=0:00:05.922, duration_ms=5922, data={name=GPIO_EMIO_system, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:53:57], mode=BUILD, duration=0:00:00.686, duration_ms=686, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:54:03], mode=BUILD, duration=0:00:05.985, duration_ms=5985, data={name=GPIO_EMIO_system, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:59:18], mode=BUILD, duration=0:00:00.756, duration_ms=756, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 16:59:25], mode=BUILD, duration=0:00:05.985, duration_ms=5985, data={name=GPIO_EMIO_system, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 17:02:30], mode=BUILD, duration=0:00:00.673, duration_ms=673, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 17:02:36], mode=BUILD, duration=0:00:05.859, duration_ms=5859, data={name=GPIO_EMIO_system, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 17:04:58], mode=BUILD, duration=0:00:00.688, duration_ms=688, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-06-30 17:05:05], mode=BUILD, duration=0:00:05.918, duration_ms=5918, data={name=GPIO_EMIO_system, configuration=Debug, clean_build=false}
+timestamp=[2023-07-01 08:09:15], mode=WORKBENCH_START, duration=0:00:06.623, duration_ms=6623, data={}
+timestamp=[2023-07-01 08:09:15], mode=WORKBENCH_UI_INIT, duration=0:00:00.782, duration_ms=782, data={editors_count=6, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=GPIO_EMIO,GPIO_EMIO_system,RemoteSystemsTempFiles,design_1_wrapper}
+timestamp=[2023-07-01 08:09:16], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.078, duration_ms=78, data={}
+timestamp=[2023-07-01 08:09:25], mode=BUILD, duration=0:00:00.418, duration_ms=418, data={name=GPIO_EMIO, configuration=Debug, clean_build=false}
+timestamp=[2023-07-01 08:09:31], mode=BUILD, duration=0:00:05.688, duration_ms=5688, data={name=GPIO_EMIO_system, configuration=Debug, clean_build=false}
+timestamp=[2023-07-01 13:05:46], mode=WORKBENCH_START, duration=0:00:05.964, duration_ms=5964, data={}
+timestamp=[2023-07-01 13:05:47], mode=WORKBENCH_UI_INIT, duration=0:00:00.777, duration_ms=777, data={editors_count=9, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=GPIO_EMIO,GPIO_EMIO_system,RemoteSystemsTempFiles,design_1_wrapper}
+timestamp=[2023-07-01 13:05:47], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.063, duration_ms=63, data={}

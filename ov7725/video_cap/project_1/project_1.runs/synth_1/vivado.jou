@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Jul 25 11:37:49 2023
+# Process ID: 58712
+# Current directory: C:/Users/SUXP/Desktop/ov7725/video_cap/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log ov7725_data_sample.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ov7725_data_sample.tcl
+# Log file: C:/Users/SUXP/Desktop/ov7725/video_cap/project_1/project_1.runs/synth_1/ov7725_data_sample.vds
+# Journal file: C:/Users/SUXP/Desktop/ov7725/video_cap/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ov7725_data_sample.tcl -notrace

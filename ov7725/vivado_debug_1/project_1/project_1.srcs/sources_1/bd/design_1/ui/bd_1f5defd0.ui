@@ -1,0 +1,29 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.20909",
+   "Default View_TopLeft":"-160,0",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk_0 -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_rst_n_0 -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace inst analog_ov_0 -pg 1 -lvl 1 -x 120 -y 150 -defaultsOSRD
+preplace inst ov7725_data_sample_0 -pg 1 -lvl 2 -x 390 -y 280 -defaultsOSRD
+preplace inst system_ila_3 -pg 1 -lvl 3 -x 670 -y 370 -defaultsOSRD
+preplace inst system_ila_4 -pg 1 -lvl 3 -x 670 -y 250 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 3 -x 670 -y 100 -defaultsOSRD
+preplace netloc analog_ov_0_pclk 1 1 2 220 80 NJ
+preplace netloc analog_ov_0_vsync 1 1 2 230 100 NJ
+preplace netloc analog_ov_0_href 1 1 2 240 120 NJ
+preplace netloc analog_ov_0_data 1 1 2 250 140 NJ
+preplace netloc ov7725_data_sample_0_vid_io_in_clk 1 2 1 550 300n
+preplace netloc clk_0_1 1 0 3 30 60 NJ 60 560
+preplace netloc rst_n_0_1 1 0 2 20 50 210J
+preplace netloc ov7725_data_sample_0_video_out 1 2 1 N 240
+levelinfo -pg 1 0 120 390 670 790
+pagesize -pg 1 -db -bbox -sgen -100 0 790 440
+"
+}
+{
+   "da_clkrst_cnt":"5"
+}
